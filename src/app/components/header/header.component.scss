@@ -1,0 +1,114 @@
+.navbar {
+  position: fixed;
+  top: 110px;
+  left: 80px;
+  //right: 120px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+
+  img.img-thaina {
+    height: 330px;
+    width: auto;
+    border-radius: 100%;
+    //border: 2px solid #000;
+    //background: linear-gradient(to top, #FF509A, #00acee, #FF509A);
+    //animation: rotacao-imagem 6s ease-in-out infinite;
+  }
+
+  .img-thaina.rotate {
+    animation: rotacao-imagem 6s ease-in-out infinite;
+  }
+
+  @keyframes rotacao-imagem {
+    0% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(-10deg);
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.container-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  li {
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: #858585 0 0 4px inset;
+      transition: transform 0.3s ease;
+
+      &.tooltip {
+        position: relative;
+        transition: transform 0.3s ease;
+      }
+
+      &.tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(0%);
+        background: linear-gradient(to right, #ffa2c9, #00acee);
+        box-shadow: #00acee 0 0 2px inset;
+        color: #000;
+        font-weight: 600;
+        padding: 3px 7px;
+        border-radius: 30px;
+        font-size: 14px;
+        white-space: nowrap;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      &.tooltip:hover::after {
+        background-color: #ececec;
+        opacity: 1;
+      }
+
+    }
+
+    &:nth-child(1) span {
+      transform: rotate(-20deg) translateY(70px) rotate(20deg);
+    }
+
+    &:nth-child(2) span {
+      transform: rotate(-15.5deg) translateY(80px) rotate(15.5deg);
+    }
+
+    &:nth-child(3) span {
+      transform: translateY(87px);
+    }
+
+    &:nth-child(4) span {
+      transform: rotate(33deg) translateY(90px) rotate(-33deg);
+    }
+
+    img.icons {
+      height: 38px;
+      width: auto;
+      border-radius: 50%;
+    }
+  }
+}

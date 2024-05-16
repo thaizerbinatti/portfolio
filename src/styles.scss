@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+body {
+    padding: 0;
+    background-image: url(./assets/imgs/fundo1.jpg) ;
+    font-family: "Montserrat", sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Evita scrollbars indesejados */
+  }

@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+}
+
+.home-container {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  padding: 100px 80px 100px 700px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+
+  .home-text {
+    background-color: none;
+    text-align: right;
+
+    h2 {
+      color:#810092;
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 1.0rem;
+      font-weight: 500;
+    }
+  }
+
+  .home-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: 0.2em;
+    animation: digitar 3s steps(40, end) infinite;
+  }
+
+  .typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid #00acee; /* Cursor */
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #9300a7 }
+  }
+}

@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+}
+
+.about-container {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  padding: 100px 80px 100px 700px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+
+  .about-text {
+    text-align: right;
+    background-color: none;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1.0rem;
+      font-weight: 500;
+    }
+  }
+
+  .title-about {
+    letter-spacing: 0.2em;
+    font-size: 2.0rem;
+  }
+}
